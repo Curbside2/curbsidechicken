@@ -1,15 +1,16 @@
 import React, {Component} from 'react';
 import AutoComplete from 'material-ui/AutoComplete';
 
-const colors = [
-  'Red',
-  'Orange',
-  'Yellow',
-  'Green',
-  'Blue',
-  'Purple',
-  'Black',
-  'White',
+const cars = [
+  'Honda Civic',
+  'Honda Accord',
+  'Toyota Camry',
+  'Jeep Wrangler',
+  'Ford Fusion',
+  'Hyundai Elantra',
+  'Nissan Sentra',
+  'Nisan Maxima',
+  'Nissan Altima',
 ];
 
 const menuProps = {
@@ -20,13 +21,13 @@ const menuProps = {
 /**
  * Provide props to be passed into the Menu component.
  */
-export default class AutoCompleteExampleMenuProps extends Component {
+export default class carInput extends Component {
   render() {
     return (
       <div>
         <AutoComplete
-          hintText="Type anything"
-          dataSource={colors}
+          hintText="Example: Honda Civic"
+          dataSource={cars}
           menuProps={menuProps}
         />
       </div>
