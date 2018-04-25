@@ -2,8 +2,6 @@ import React from 'react';
 import {GridList, GridTile} from 'material-ui/GridList';
 import IconButton from 'material-ui/IconButton';
 import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
-import AppBar from './AppBar'
-import SnackBar from './SnackBar'
 
 const styles = {
   root: {
@@ -52,7 +50,6 @@ const tilesData = [
  */
 const Grid = () => (
   <div style={styles.root}>
-    <AppBar />
     <GridList
       cellHeight={180}
       style={styles.gridList}
@@ -67,7 +64,6 @@ const Grid = () => (
         </GridTile>
       ))}
     </GridList>
-    <SnackBar />
   </div>
 );
 
