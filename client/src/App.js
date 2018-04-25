@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import GridList from './components/GridList'
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import './App.css';
+import Menu from './pages/Menu';
 
 class App extends Component {
   render() {
     return (
-        <div className="App">
-          <MuiThemeProvider>
-            <GridList />
-          </MuiThemeProvider>
+      <Router>
+        <div>
+          <Switch>
+            <Route exact path="/" component={Menu} />
+          </Switch>
         </div>
+      </Router>
     );
   }
 }
