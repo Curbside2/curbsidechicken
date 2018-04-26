@@ -20,67 +20,67 @@ const styles = {
 
 const tilesData = [
   {
-    img: 'images/grid-list/Screenshots/2pcCombo.PNG',
+    img: './Screenshots/2pcCombo.PNG',
     title: '2pc Chicken'
   },
   {
-    img: 'images/grid-list/Screenshots/3pcMildDinner.PNG',
+    img: './Screenshots/3pcMildDinner.PNG',
     title: '3pc Chicken'
   },
   {
-    img: 'images/grid-list/Screenshots/3pcSpicyDinner.PNG',
+    img: './Screenshots/3pcSpicyDinner.PNG',
     title: '4pc Chicken'
   },
   {
-    img: 'images/grid-list/Screenshots/3pcTenderDinner.PNG',
+    img: './Screenshots/3pcTenderDinner.PNG',
     title: '3pc Tenders'
   },
   {
-    img: './images/grid-list/Screenshots/5pctendercombos.PNG',
+    img: './Screenshots/5pctendercombo.PNG',
     title: '5pc Tenders'
   },
   {
-    img: 'images/grid-list/Screenshots/chickentenderpoboy.PNG',
+    img: './Screenshots/chickentenderpoboy.PNG',
     title: 'Chicken Po\' Boy'
   },
   {
-    img: 'images/grid-list/Screenshots/fishdinner.PNG',
+    img: './Screenshots/fishdinner.PNG',
     title: '3pc Cajun Fish'
   },
   {
-    img: './images/grid-list/Screenshots/popcornshrimpcloseup.PNG',
+    img: './Screenshots/popcornshrimpcloseup.PNG',
     title: '1/4lb. Popcorn Shrimp'
   },
   {
-    img: 'images/grid-list/Screenshots/fishshrimp.PNG',
+    img: './Screenshots/fishshrimpdinner.PNG',
     title: 'Fish & Shrimp'
   },
   {
-    img: 'images/grid-list/Screenshots/shrimpsandwich.PNG',
+    img: './Screenshots/shrimpsandwich.PNG',
     title: 'Seafood Po\' Boy'
   },
   {
-    img: 'images/grid-list/Screenshots/8pcfamily.PNG',
+    img: './Screenshots/8pcfamily.PNG',
     title: '8pc Chicken'
   },  
   {
-    img: 'images/grid-list/Screenshots/12piecefamilymeal.PNG',
+    img: './Screenshots/12piecefamilymeal.jpg',
     title: '12pc Chicken'
   },
   {
-    img: 'images/grid-list/Screenshots/20piecesofchicken.PNG',
+    img: './Screenshots/20piecesofchicken.jpg',
     title: '16pc Chicken'
   },
   {
-    img: 'images/grid-list/Screenshots/20piecesofchicken.PNG',
+    img: './Screenshots/20piecesofchicken.jpg',
     title: '20pc Chicken'
   },
   {
-    img: 'images/grid-list/Screenshots/20piecesofchicken.PNG',
+    img: './Screenshots/20piecesofchicken.jpg',
     title: '24pc Chicken'
   },
   {
-    img: 'images/grid-list/Screenshots/20piecesofchicken.PNG',
+    img: './Screenshots/20piecesofchicken.jpg',
     title: '30pc Chicken'
   }
 ];
@@ -100,7 +100,7 @@ const Grid = () => (
           title={tile.title}
           actionIcon={<IconButton><MoreVertIcon color="black" /></IconButton>}
         >
-          <img src={tile.img} alt='img' />
+          <img src={tile.img} alt='img' className='imgSize'/>
         </GridTile>
       ))}
     </GridList>
