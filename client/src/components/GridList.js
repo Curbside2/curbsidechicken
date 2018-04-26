@@ -20,29 +20,69 @@ const styles = {
 
 const tilesData = [
   {
-    img: 'images/grid-list/PopeyesMenu.jpg',
-    title: 'Chicken Combos',
+    img: 'images/grid-list/Screenshots/2pcCombo.PNG',
+    title: '2pc Chicken'
   },
   {
-    img: 'images/grid-list/burger-827309_640.jpg',
-    title: 'Tender Combos',
+    img: 'images/grid-list/Screenshots/3pcMildDinner.PNG',
+    title: '3pc Chicken'
   },
   {
-    img: 'images/grid-list/camera-813814_640.jpg',
-    title: 'Seafood Combos',
+    img: 'images/grid-list/Screenshots/3pcSpicyDinner.PNG',
+    title: '4pc Chicken'
   },
   {
-    img: 'images/grid-list/morning-819362_640.jpg',
-    title: 'Family Meals',
+    img: 'images/grid-list/Screenshots/3pcTenderDinner.PNG',
+    title: '3pc Tenders'
   },
   {
-    img: 'images/grid-list/hats-829509_640.jpg',
-    title: 'Beverages',
+    img: './images/grid-list/Screenshots/5pctendercombos.PNG',
+    title: '5pc Tenders'
   },
   {
-    img: 'images/grid-list/honey-823614_640.jpg',
-    title: 'Signature Sides',
+    img: 'images/grid-list/Screenshots/chickentenderpoboy.PNG',
+    title: 'Chicken Po\' Boy'
   },
+  {
+    img: 'images/grid-list/Screenshots/fishdinner.PNG',
+    title: '3pc Cajun Fish'
+  },
+  {
+    img: './images/grid-list/Screenshots/popcornshrimpcloseup.PNG',
+    title: '1/4lb. Popcorn Shrimp'
+  },
+  {
+    img: 'images/grid-list/Screenshots/fishshrimp.PNG',
+    title: 'Fish & Shrimp'
+  },
+  {
+    img: 'images/grid-list/Screenshots/shrimpsandwich.PNG',
+    title: 'Seafood Po\' Boy'
+  },
+  {
+    img: 'images/grid-list/Screenshots/8pcfamily.PNG',
+    title: '8pc Chicken'
+  },  
+  {
+    img: 'images/grid-list/Screenshots/12piecefamilymeal.PNG',
+    title: '12pc Chicken'
+  },
+  {
+    img: 'images/grid-list/Screenshots/20piecesofchicken.PNG',
+    title: '16pc Chicken'
+  },
+  {
+    img: 'images/grid-list/Screenshots/20piecesofchicken.PNG',
+    title: '20pc Chicken'
+  },
+  {
+    img: 'images/grid-list/Screenshots/20piecesofchicken.PNG',
+    title: '24pc Chicken'
+  },
+  {
+    img: 'images/grid-list/Screenshots/20piecesofchicken.PNG',
+    title: '30pc Chicken'
+  }
 ];
 
 /**
