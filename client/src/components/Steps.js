@@ -23,19 +23,8 @@ import Input from './Input';
 class VerticalLinearStepper extends React.Component {
 
   state = {
-    modal: false,
     finished: false,
     stepIndex: 0,
-  };
-
-  handleModalOpen = () => {
-    this.setState({open: true});
-    console.log(this.state.modal);
-  };
-
-  handleModalClose = () => {
-    this.setState({open: false});
-    console.log(this.state.modal);
   };
 
   handleNext = () => {
@@ -96,7 +85,7 @@ class VerticalLinearStepper extends React.Component {
           <Step>
             <StepLabel>Place Your Order</StepLabel>
             <StepContent>
-              <GridList modal={this.state.handleModalOpen}/>
+              <GridList />
               {this.renderStepActions(1)}
             </StepContent>
           </Step>
