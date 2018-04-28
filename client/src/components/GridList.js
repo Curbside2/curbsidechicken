@@ -120,7 +120,7 @@ const Grid = (props) => (
         tilesData.map((tile,index) => (
         <GridTile
         {...props}
-          key={tile.img}
+          key={tile.img + index}
           title={tile.title}
           actionIcon={<IconButton>}><MoreVertIcon onClick={()=>{
 

@@ -64,7 +64,6 @@ class VerticalLinearStepper extends React.Component {
           disableTouchRipple={true}
           disableFocusRipple={true}
           primary={true}
-          modal={this.handleModalOpen}
           onClick={this.handleNext}
           style={{marginRight: 12}}
         />
@@ -75,7 +74,6 @@ class VerticalLinearStepper extends React.Component {
             disableTouchRipple={true}
             disableFocusRipple={true}
             onClick={this.handlePrev}
-            modal={this.handleModalOpen}
           />
         )}
       </div>
@@ -120,7 +118,6 @@ class VerticalLinearStepper extends React.Component {
         {finished && (
           <p style={{margin: '20px 0', textAlign: 'center'}}>
             <a
-              href="#"
               onClick={(event) => {
                 event.preventDefault();
                 this.setState({stepIndex: 0, finished: false});
