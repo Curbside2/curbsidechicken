@@ -9,6 +9,7 @@ class App extends Component {
       <Router>
         <div>
           <Switch>
+            <Route exact path="/" component={Landing} />
             <Route exact path="/menu" component={Menu} />
           </Switch>
         </div>

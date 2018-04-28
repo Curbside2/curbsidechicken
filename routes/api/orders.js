@@ -5,7 +5,7 @@ const controller = require("../../controllers/controller");
 router.route("/")
   .post(controller.create);
 
-// Matches with "/api/users/:id"
+// Matches with "/api/orders/:id"
 router
   .route("/:id")
   .get(controller.findById)

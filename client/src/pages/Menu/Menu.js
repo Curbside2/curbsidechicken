@@ -10,7 +10,6 @@ class Menu extends Component {
 				<Steps />
 			</MuiThemeProvider>
 		)
-		
 	}
 };
 
