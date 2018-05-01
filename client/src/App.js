@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import './App.css';
 import Menu from './pages/Menu';
-import Navigation from './components/Navigation';
-import { auth } from './firebase/firebase.js';
+// import Navigation from './components/Navigation';
+// import { auth } from './firebase/firebase.js';
 import SignUpPage from './components/SignUp';
 import SignInPage from './components/SignIn';
 import Profile from './pages/Profile'

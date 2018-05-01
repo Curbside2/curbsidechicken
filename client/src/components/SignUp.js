@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { db, auth } from '../firebase'
 import * as routes from '../constants/routes';
 
@@ -30,14 +30,14 @@ class SignUpForm extends Component {
     const {
       email,
       passwordOne,
-      passwordTwo,
-      error,
+      // passwordTwo,
+      // error,
     } = this.state;
 
-    const isInvalid =
-      passwordOne !== passwordTwo ||
-      passwordOne === '' ||
-      email === '';
+    // const isInvalid =
+    //   passwordOne !== passwordTwo ||
+    //   passwordOne === '' ||
+    //   email === '';
 
     const {
       history,

@@ -4,8 +4,8 @@ import IconButton from 'material-ui/IconButton';
 import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
 import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
-import RaisedButton from 'material-ui/RaisedButton';
-import VerticalLinearStepper from './Steps.js';
+// import RaisedButton from 'material-ui/RaisedButton';
+// import VerticalLinearStepper from './Steps.js';
 import {RadioButton, RadioButtonGroup} from 'material-ui/RadioButton';
 import Checkbox from 'material-ui/Checkbox';
 import tilesData from './tilesData.json';
@@ -24,7 +24,7 @@ class Grid extends Component {
     smallSideOptions: "",
     largeSideOptions: "",
     twoLargeSideOptions: [],
-    threeLargeOptions: [],
+    threeLargeSideOptions: [],
     beverageOptions: "",
     gallonOptions: "",
     condimentOptions: [],
@@ -64,21 +64,25 @@ class Grid extends Component {
 
   handleCondimentChange = event => {
     const value = event.target.value;
+    console.log(value);
     this.state.condimentOptions.push(value);
   };
 
   handleTwoSidesChange = event => {
     const value = event.target.value;
+    console.log(value);
     this.state.twoLargeSideOptions.push(value);
   };
 
   handleThreeSidesChange = event => {
     const value = event.target.value;
+    console.log(value);
     this.state.threeLargeSideOptions.push(value);
   };
 
   handleDessertChange = event => {
     const value = event.target.value;
+    console.log(value);
     this.state.dessertOptions.push(value);
   };
 
@@ -329,7 +333,8 @@ class Grid extends Component {
                   modal= {true}
                   open={this.state.open}
                   actions={this.actions}
-                  // autoScrollBodyContent={true}
+                  autoScrollBodyContent={true}
+                  autoDetectWindowHeight={true}
                 >
 
                   { this.createSubMenu(this.state.options)}
