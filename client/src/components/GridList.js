@@ -15,7 +15,9 @@ class Grid extends Component {
 
   state = {
     open: false,
-    tilesData: tilesData
+    tilesData: tilesData,
+    title: "",
+    price: ""
   };
 
   styles = {
@@ -33,8 +35,10 @@ class Grid extends Component {
     },
   };
 
-  handleModalOpen = () => {
+  handleModalOpen = (title, price) => {
     this.setState({open: true});
+    this.setState({title: title});
+    this.setState({price: price});
     console.log(this.state.open);
   };
 
@@ -255,19 +259,21 @@ class Grid extends Component {
         <GridList
           cellHeight={180}
           style={this.styles.gridList}
+          cols={1}
         >
           {
             this.state.tilesData.map((tile) => (
             <GridTile
               key={tile.id}
               title={tile.title}
+              // cols={2}
               actionIcon={<IconButton>}>
                 <MoreVertIcon onClick={()=>{
-                  this.handleModalOpen();
+                  this.handleModalOpen(tile.title, tile.price);
                   console.log(tile.title);
                 }}color="red" />
                 <Dialog 
-                  title={tile.title}
+                  title={`${this.state.title} $${this.state.price}`}
                   modal= {true}
                   open={this.state.open}
                   actions={this.actions}
