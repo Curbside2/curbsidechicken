@@ -1,0 +1,290 @@
+ [
+    {
+      "id": 2,
+      "img": "./Screenshots/2pcCombo.PNG",
+      "title": "2pc Chicken",
+      "options": {
+        "flavor": true,
+        "seafood": false,
+        "beverages": true,
+        "gallons": false,
+        "smallsides": true,
+        "largesides": false,
+        "twolargesides": false,
+        "threelargesdes": false,
+        "dessert": true,
+        "condiments": true
+      },
+      "price": 7.19
+    },
+    {
+      "id": 3,
+      "img": "./Screenshots/3pcMildDinner.PNG",
+      "title": "3pc Chicken",
+      "options": {
+        "flavor": true,
+        "seafood": false,
+        "beverages": true,
+        "gallons": false,
+        "smallsides": true,
+        "largesides": false,
+        "twolargesides": false,
+        "threelargesdes": false,
+        "dessert": true,
+        "condiments": true
+      },
+      "price": 8.29 
+    },
+    {
+      "id": 4,
+      "img": "./Screenshots/3pcSpicyDinner.PNG",
+      "title": "4pc Chicken",
+      "options": {
+        "flavor": true,
+        "seafood": false,
+        "beverages": true,
+        "gallons": false,
+        "smallsides": true,
+        "largesides": false,
+        "twolargesides": false,
+        "threelargesdes": false,
+        "dessert": true,
+        "condiments": true
+      },
+      "price": 9.39
+    },
+    {
+      "id": 5,
+      "img": "./Screenshots/3pcTenderDinner.PNG",
+      "title": "3pc Tenders",
+      "options": {
+        "flavor": true,
+        "seafood": false,
+        "beverages": true,
+        "gallons": false,
+        "smallsides": true,
+        "largesides": false,
+        "twolargesides": false,
+        "threelargesdes": false,
+        "dessert": true,
+        "condiments": true
+      },
+      "price": 8.29
+    },
+    {
+      "id": 6, 
+      "img": "./Screenshots/5pctendercombo.PNG",
+      "title": "5pc Tenders",
+      "options": {
+        "flavor": true,
+        "seafood": false,
+        "beverages": true,
+        "gallons": false,
+        "smallsides": true,
+        "largesides": false,
+        "twolargesides": false,
+        "threelargesdes": false,
+        "dessert": true,
+        "condiments": true
+      },
+      "price": 9.39
+    },
+    {
+      "id": 7, 
+      "img": "./Screenshots/chickentenderpoboy.PNG",
+      "title": "Chicken Po\" Boy",
+      "options": {
+        "flavor": true,
+        "seafood": false,
+        "beverages": true,
+        "gallons": false,
+        "smallsides": true,
+        "largesides": false,
+        "twolargesides": false,
+        "threelargesdes": false,
+        "dessert": true,
+        "condiments": true
+      },
+      "price": 6.59
+    },
+    {
+      "id": 8, 
+      "img": "./Screenshots/fishdinner.PNG",
+      "title": "3pc Cajun Fish",
+      "options": {
+        "flavor": false,
+        "seafood": false,
+        "beverages": true,
+        "gallons": false,
+        "smallsides": true,
+        "largesides": false,
+        "twolargesides": false,
+        "threelargesdes": false,
+        "dessert": true,
+        "condiments": true
+      },
+      "price": 7.19
+    },
+    {
+      "id": 9,
+      "img": "./Screenshots/popcornshrimpcloseup.PNG",
+      "title": "1/4lb. Popcorn Shrimp",
+      "options": {
+        "flavor": false,
+        "seafood": false,
+        "beverages": true,
+        "gallons": false,
+        "smallsides": true,
+        "largesides": false,
+        "twolargesides": false,
+        "threelargesdes": false,
+        "dessert": true,
+        "condiments": true
+      },
+      "price": 7.19
+    },
+    {
+      "id": 10,
+      "img": "./Screenshots/fishshrimpdinner.PNG",
+      "title": "Fish & Shrimp",
+      "options": {
+        "flavor": false,
+        "seafood": true,
+        "beverages": true,
+        "gallons": false,
+        "smallsides": true,
+        "largesides": false,
+        "twolargesides": false,
+        "threelargesdes": false,
+        "dessert": true,
+        "condiments": true
+      },
+      "price": 8.29
+    },
+    {
+      "id": 11,
+      "img": "./Screenshots/shrimpsandwich.PNG",
+      "title": "Seafood Po Boy",
+      "options": {
+        "flavor": false,
+        "seafood": true,
+        "beverages": true,
+        "gallons": false,
+        "smallsides": true,
+        "largesides": false,
+        "twolargesides": false,
+        "threelargesdes": false,
+        "dessert": true,
+        "condiments": true
+      },
+      "price": 6.59
+    },
+    {
+      "id": 12,
+      "img": "./Screenshots/8pcfamily.PNG",
+      "title": "8pc Chicken",
+      "options": {
+        "flavor": true,
+        "seafood": false,
+        "beverages": false,
+        "gallons": true,
+        "smallsides": false,
+        "largesides": true,
+        "twolargesides": false,
+        "threelargesdes": false,
+        "dessert": true,
+        "condiments": true
+      },
+      "price": 21.49
+    },  
+    {
+      "id": 13,
+      "img": "./Screenshots/12piecefamilymeal.jpg",
+      "title": "12pc Chicken",
+      "options": {
+        "flavor": true,
+        "seafood": false,
+        "beverages": false,
+        "gallons": true,
+        "smallsides": false,
+        "largesides": false,
+        "twolargesides": true,
+        "threelargesdes": false,
+        "dessert": true,
+        "condiments": true
+      },
+      "price": 31.99
+    },
+    {
+      "id": 14,
+      "img": "./Screenshots/20piecesofchicken.jpg",
+      "title": "16pc Chicken",
+      "options": {
+        "flavor": true,
+        "seafood": false,
+        "beverages": true,
+        "gallons": false,
+        "smallsides": true,
+        "largesides": false,
+        "twolargesides": false,
+        "threelargesdes": true,
+        "dessert": true,
+        "condiments": true
+      },
+      "price": 41.29
+    },
+    {
+      "id": 15,
+      "img": "./Screenshots/20piecesofchicken.jpg",
+      "title": "20pc Chicken",
+      "options": {
+        "flavor": true,
+        "seafood": false,
+        "beverages": true,
+        "gallons": false,
+        "smallsides": true,
+        "largesides": false,
+        "twolargesides": false,
+        "threelargesdes": true,
+        "dessert": true,
+        "condiments": true
+      },
+      "price": 46.79
+    },
+    {
+      "id": 16,
+      "img": "./Screenshots/20piecesofchicken.jpg",
+      "title": "24pc Chicken",
+      "options": {
+        "flavor": true,
+        "seafood": false,
+        "beverages": true,
+        "gallons": false,
+        "smallsides": true,
+        "largesides": false,
+        "twolargesides": false,
+        "threelargesdes": true,
+        "dessert": true,
+        "condiments": true
+      },
+      "price": 51.19
+    },
+    {
+      "id": 17,
+      "img": "./Screenshots/20piecesofchicken.jpg",
+      "title": "30pc Chicken",
+      "options": {
+        "flavor": true,
+        "seafood": false,
+        "beverages": true,
+        "gallons": false,
+        "smallsides": true,
+        "largesides": false,
+        "twolargesides": false,
+        "threelargesdes": true,
+        "dessert": true,
+        "condiments": true
+      },
+      "price": 56.79
+    }
+  ]

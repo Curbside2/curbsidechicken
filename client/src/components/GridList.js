@@ -8,14 +8,14 @@ import RaisedButton from 'material-ui/RaisedButton';
 import VerticalLinearStepper from './Steps.js';
 import {RadioButton, RadioButtonGroup} from 'material-ui/RadioButton';
 import Checkbox from 'material-ui/Checkbox';
-  
-
-
+import tilesData from './tilesData.json';
+import "./GridList.css"
 
 class Grid extends Component {
 
   state = {
-    open: false
+    open: false,
+    tilesData: tilesData
   };
 
   styles = {
@@ -45,7 +45,7 @@ class Grid extends Component {
 
   getFlavorOptions = () => {
     return (
-      <div>
+      <div className="menuOptions">
       <div>Choose Flavor</div>
       <RadioButtonGroup name='flavorOptions'>
         <RadioButton value="mild" label="mild" />
@@ -59,7 +59,7 @@ class Grid extends Component {
 
   getSeafoodOptions = () => {
     return (
-      <div>
+      <div className="menuOptions">
       <div>Seafood Options</div>
       <RadioButtonGroup name='seafoodOptions'>
         <RadioButton value="fish" label="fish" />
@@ -71,7 +71,7 @@ class Grid extends Component {
   
   getSmallSideOptions = () => {
       return (
-        <div>
+        <div className="menuOptions">
         <div>Choose Signature Side</div>
       <RadioButtonGroup name='smallSideOptions'>
         <RadioButton value="redbeansandrice" label="red beans and rice" />
@@ -89,7 +89,7 @@ class Grid extends Component {
   
   getLargeSideOptions = () => {
       return (
-        <div>
+        <div className="menuOptions">
         <div>Choose Signature Side</div>
       <RadioButtonGroup name='largeSideOptions'>
         <RadioButton value="redbeansandrice" label="red beans and rice" />
@@ -107,7 +107,7 @@ class Grid extends Component {
   
   getTwoLargeSideOptions = () => {
       return (
-        <div>
+        <div className="menuOptions">
         <div>Choose 2 Signature Sides</div>
       <div name='twoLargeSideOptions'>
         <Checkbox value="redbeansandrice" label="red beans and rice" />
@@ -125,7 +125,7 @@ class Grid extends Component {
   
   getThreeLargeSideOptions = () => {
       return (
-        <div>
+        <div className="menuOptions">
         <div>Choose 3 Signature Side</div>
       <div name='threeLargeSideOptions'>
         <Checkbox value="redbeansandrice" label="red beans and rice" />
@@ -143,7 +143,7 @@ class Grid extends Component {
   
   getCondimentOptions = () => {
       return (
-        <div>
+        <div className="menuOptions">
         <div>Condiments</div>
       <div name='condimentOptions'>
         <Checkbox value="ketchup" label="ketchup" />
@@ -160,7 +160,7 @@ class Grid extends Component {
   
   getDessertOptions = () => {
       return (
-        <div>
+        <div className="menuOptions">
         <div>Desserts</div>
       <div name='dessertOptions'>
         <Checkbox value="applepie" label="apple pie" />
@@ -173,7 +173,7 @@ class Grid extends Component {
   
   getBeverageOptions = () => {
     return (
-      <div>
+      <div className="menuOptions">
       <div>Beverages</div>
       <RadioButtonGroup name='beverageOptions'>
         <RadioButton value="coke" label="coke" />
@@ -190,7 +190,7 @@ class Grid extends Component {
   
   getGallonOptions = () => {
     return (
-      <div>
+      <div className="menuOptions">
       <div>Gallons</div>
       <RadioButtonGroup name='gallonOptions'>
         <RadioButton value="fruit punch" label="fruit punch" />
@@ -200,281 +200,6 @@ class Grid extends Component {
       </div>
     )
   };
-
-  tilesData = [
-    {
-      id: 2,
-      img: './Screenshots/2pcCombo.PNG',
-      title: '2pc Chicken',
-      options: {
-        flavor: true,
-        seafood: false,
-        beverages: true,
-        gallons: false,
-        smallsides: true,
-        largesides: false,
-        twolargesides: false,
-        threelargesdes: false,
-        dessert: true,
-        condiments: true
-      }
-    },
-    {
-      id: 3,
-      img: './Screenshots/3pcMildDinner.PNG',
-      title: '3pc Chicken',
-      options: {
-        flavor: true,
-        seafood: false,
-        beverages: true,
-        gallons: false,
-        smallsides: true,
-        largesides: false,
-        twolargesides: false,
-        threelargesdes: false,
-        dessert: true,
-        condiments: true
-      } 
-    },
-    {
-      id: 4,
-      img: './Screenshots/3pcSpicyDinner.PNG',
-      title: '4pc Chicken',
-      options: {
-        flavor: true,
-        seafood: false,
-        beverages: true,
-        gallons: false,
-        smallsides: true,
-        largesides: false,
-        twolargesides: false,
-        threelargesdes: false,
-        dessert: true,
-        condiments: true
-      }
-    },
-    {
-      id: 5,
-      img: './Screenshots/3pcTenderDinner.PNG',
-      title: '3pc Tenders',
-      options: {
-        flavor: true,
-        seafood: false,
-        beverages: true,
-        gallons: false,
-        smallsides: true,
-        largesides: false,
-        twolargesides: false,
-        threelargesdes: false,
-        dessert: true,
-        condiments: true
-      }
-    },
-    {
-      id: 6, 
-      img: './Screenshots/5pctendercombo.PNG',
-      title: '5pc Tenders',
-      options: {
-        flavor: true,
-        seafood: false,
-        beverages: true,
-        gallons: false,
-        smallsides: true,
-        largesides: false,
-        twolargesides: false,
-        threelargesdes: false,
-        dessert: true,
-        condiments: true
-      }
-    },
-    {
-      id: 7, 
-      img: './Screenshots/chickentenderpoboy.PNG',
-      title: 'Chicken Po\' Boy',
-      options: {
-        flavor: true,
-        seafood: false,
-        beverages: true,
-        gallons: false,
-        smallsides: true,
-        largesides: false,
-        twolargesides: false,
-        threelargesdes: false,
-        dessert: true,
-        condiments: true
-      }
-    },
-    {
-      id: 8, 
-      img: './Screenshots/fishdinner.PNG',
-      title: '3pc Cajun Fish',
-      options: {
-        flavor: false,
-        seafood: false,
-        beverages: true,
-        gallons: false,
-        smallsides: true,
-        largesides: false,
-        twolargesides: false,
-        threelargesdes: false,
-        dessert: true,
-        condiments: true
-      }
-    },
-    {
-      id: 9,
-      img: './Screenshots/popcornshrimpcloseup.PNG',
-      title: '1/4lb. Popcorn Shrimp',
-      options: {
-        flavor: false,
-        seafood: false,
-        beverages: true,
-        gallons: false,
-        smallsides: true,
-        largesides: false,
-        twolargesides: false,
-        threelargesdes: false,
-        dessert: true,
-        condiments: true
-      }
-    },
-    {
-      id: 10,
-      img: './Screenshots/fishshrimpdinner.PNG',
-      title: 'Fish & Shrimp',
-      options: {
-        flavor: false,
-        seafood: true,
-        beverages: true,
-        gallons: false,
-        smallsides: true,
-        largesides: false,
-        twolargesides: false,
-        threelargesdes: false,
-        dessert: true,
-        condiments: true
-      }
-    },
-    {
-      id: 11,
-      img: './Screenshots/shrimpsandwich.PNG',
-      title: 'Seafood Po\' Boy',
-      options: {
-        flavor: false,
-        seafood: true,
-        beverages: true,
-        gallons: false,
-        smallsides: true,
-        largesides: false,
-        twolargesides: false,
-        threelargesdes: false,
-        dessert: true,
-        condiments: true
-      }
-    },
-    {
-      id: 12,
-      img: './Screenshots/8pcfamily.PNG',
-      title: '8pc Chicken',
-      options: {
-        flavor: true,
-        seafood: false,
-        beverages: false,
-        gallons: true,
-        smallsides: false,
-        largesides: true,
-        twolargesides: false,
-        threelargesdes: false,
-        dessert: true,
-        condiments: true
-      }
-    },  
-    {
-      id: 13,
-      img: './Screenshots/12piecefamilymeal.jpg',
-      title: '12pc Chicken',
-      options: {
-        flavor: true,
-        seafood: false,
-        beverages: false,
-        gallons: true,
-        smallsides: false,
-        largesides: false,
-        twolargesides: true,
-        threelargesdes: false,
-        dessert: true,
-        condiments: true
-      }
-    },
-    {
-      id: 14,
-      img: './Screenshots/20piecesofchicken.jpg',
-      title: '16pc Chicken',
-      options: {
-        flavor: true,
-        seafood: false,
-        beverages: true,
-        gallons: false,
-        smallsides: true,
-        largesides: false,
-        twolargesides: false,
-        threelargesdes: true,
-        dessert: true,
-        condiments: true
-      }
-    },
-    {
-      id: 15,
-      img: './Screenshots/20piecesofchicken.jpg',
-      title: '20pc Chicken',
-      options: {
-        flavor: true,
-        seafood: false,
-        beverages: true,
-        gallons: false,
-        smallsides: true,
-        largesides: false,
-        twolargesides: false,
-        threelargesdes: true,
-        dessert: true,
-        condiments: true
-      }
-    },
-    {
-      id: 16,
-      img: './Screenshots/20piecesofchicken.jpg',
-      title: '24pc Chicken',
-      options: {
-        flavor: true,
-        seafood: false,
-        beverages: true,
-        gallons: false,
-        smallsides: true,
-        largesides: false,
-        twolargesides: false,
-        threelargesdes: true,
-        dessert: true,
-        condiments: true
-      }
-    },
-    {
-      id: 17,
-      img: './Screenshots/20piecesofchicken.jpg',
-      title: '30pc Chicken',
-      options: {
-        flavor: true,
-        seafood: false,
-        beverages: true,
-        gallons: false,
-        smallsides: true,
-        largesides: false,
-        twolargesides: false,
-        threelargesdes: true,
-        dessert: true,
-        condiments: true
-      }
-    }
-  ];
 
     createSubMenu = (options) => {
     return (
@@ -532,21 +257,21 @@ class Grid extends Component {
           style={this.styles.gridList}
         >
           {
-            this.tilesData.map((tile,index) => (
+            this.state.tilesData.map((tile) => (
             <GridTile
-              key={tile.img + index}
+              key={tile.id}
               title={tile.title}
               actionIcon={<IconButton>}>
                 <MoreVertIcon onClick={()=>{
-                  this.handleModalOpen()
-                  console.log(this.tilesData[index].title);
+                  this.handleModalOpen();
+                  console.log(tile.title);
                 }}color="red" />
                 <Dialog 
-                  title=""
+                  title={tile.title}
                   modal= {true}
                   open={this.state.open}
                   actions={this.actions}
-                  autoScrollBodyContent={true}
+                  // autoScrollBodyContent={true}
                 >
 
                   { this.createSubMenu(tile.options)}
