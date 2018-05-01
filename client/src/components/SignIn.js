@@ -7,7 +7,7 @@ import * as routes from '../constants/routes';
 
 const SignInPage = ({ history }) =>
   <div>
-    <h1>SignIn</h1>
+    <h2 style={{ padding: "10px 20px", textAlign: "center", color: "black"}}>Sign In to Curbside Chicken!</h2>
     <SignInForm history={history} />
     <SignUpLink />
   </div>
