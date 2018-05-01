@@ -7,7 +7,7 @@ const style = {
   marginLeft: 20,
 };
 
-const DividerExampleForm = () => (
+const DividerForm = () => (
   <Paper zDepth={2}>
     <TextField hintText="First name" style={style} underlineShow={false} />
     <Divider />
@@ -18,4 +18,4 @@ const DividerExampleForm = () => (
   </Paper>
 );
 
-export default DividerExampleForm;
+export default DividerForm;

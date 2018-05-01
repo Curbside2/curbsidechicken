@@ -4,6 +4,7 @@ import FileFolder from 'material-ui/svg-icons/file/folder';
 import FontIcon from 'material-ui/FontIcon';
 import List from 'material-ui/List/List';
 import ListItem from 'material-ui/List/ListItem';
+import Form from './Form'
 
 // import {
 //   blue300,
@@ -27,15 +28,14 @@ const Avi = () => (
   <List>
     <ListItem
       disabled={true}
-      leftAvatar={
+      rightAvatar={
         <Avatar
           src="./screenshots/bondJamesbond.jpg"
-          size={100}
+          size={200}
           style={style}
         />
       }
     />
-    
   </List>
 );
 
