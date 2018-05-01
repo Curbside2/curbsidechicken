@@ -7,7 +7,7 @@ import FlatButton from 'material-ui/FlatButton';
 import RaisedButton from 'material-ui/RaisedButton';
 import VerticalLinearStepper from './Steps.js';
 import {RadioButton, RadioButtonGroup} from 'material-ui/RadioButton';
-import {Checkbox, CheckboxGroup} from 'material-ui/Checkbox';
+import Checkbox from 'material-ui/Checkbox';
   
 
 
@@ -45,26 +45,34 @@ class Grid extends Component {
 
   getFlavorOptions = () => {
     return (
+      <div>
+      <div>Choose Flavor</div>
       <RadioButtonGroup name='flavorOptions'>
         <RadioButton value="mild" label="mild" />
         <RadioButton value="spicy" label="spicy" />
         <RadioButton value="mixed" label="mixed" />
       </RadioButtonGroup>
+      </div>
     )
   };
 
 
   getSeafoodOptions = () => {
     return (
+      <div>
+      <div>Seafood Options</div>
       <RadioButtonGroup name='seafoodOptions'>
         <RadioButton value="fish" label="fish" />
         <RadioButton value="shrimp" label="shrimp" />
       </RadioButtonGroup>
+      </div>
     )
   };
   
   getSmallSideOptions = () => {
       return (
+        <div>
+        <div>Choose Signature Side</div>
       <RadioButtonGroup name='smallSideOptions'>
         <RadioButton value="redbeansandrice" label="red beans and rice" />
         <RadioButton value="mashedpotatoesandgravy" label="mashed potatoes and gravy" />
@@ -75,11 +83,14 @@ class Grid extends Component {
         <RadioButton value="cajunfries" label="cajun fries" />
         <RadioButton value="cornonthecob" label="corn on the cob" />
       </RadioButtonGroup>
+      </div>
     )
   };
   
   getLargeSideOptions = () => {
       return (
+        <div>
+        <div>Choose Signature Side</div>
       <RadioButtonGroup name='largeSideOptions'>
         <RadioButton value="redbeansandrice" label="red beans and rice" />
         <RadioButton value="mashedpotatoesandgravy" label="mashed potatoes and gravy" />
@@ -90,12 +101,15 @@ class Grid extends Component {
         <RadioButton value="cajunfries" label="cajun fries" />
         <RadioButton value="cornonthecob" label="corn on the cob" />
       </RadioButtonGroup>
+      </div>
     )
   };
   
   getTwoLargeSideOptions = () => {
       return (
-      <CheckboxGroup name='twoLargeSideOptions'>
+        <div>
+        <div>Choose 2 Signature Sides</div>
+      <div name='twoLargeSideOptions'>
         <Checkbox value="redbeansandrice" label="red beans and rice" />
         <Checkbox value="mashedpotatoesandgravy" label="mashed potatoes and gravy" />
         <Checkbox value="macaroniandcheese" label="macaroni and cheese" />
@@ -104,13 +118,16 @@ class Grid extends Component {
         <Checkbox value="coleslaw" label="cole slaw" />
         <Checkbox value="cajunfries" label="cajun fries" />
         <Checkbox value="cornonthecob" label="corn on the cob" />
-      </CheckboxGroup>
+      </div>
+      </div>
     )
   };
   
   getThreeLargeSideOptions = () => {
       return (
-      <CheckboxGroup name='threeLargeSideOptions'>
+        <div>
+        <div>Choose 3 Signature Side</div>
+      <div name='threeLargeSideOptions'>
         <Checkbox value="redbeansandrice" label="red beans and rice" />
         <Checkbox value="mashedpotatoesandgravy" label="mashed potatoes and gravy" />
         <Checkbox value="macaroniandcheese" label="macaroni and cheese" />
@@ -119,13 +136,16 @@ class Grid extends Component {
         <Checkbox value="coleslaw" label="cole slaw" />
         <Checkbox value="cajunfries" label="cajun fries" />
         <Checkbox value="cornonthecob" label="corn on the cob" />
-      </CheckboxGroup>
+      </div>
+      </div>
     )
   };
   
   getCondimentOptions = () => {
       return (
-      <CheckboxGroup name='condimentOptions'>
+        <div>
+        <div>Condiments</div>
+      <div name='condimentOptions'>
         <Checkbox value="ketchup" label="ketchup" />
         <Checkbox value="hotsauce" label="hot sauce" />
         <Checkbox value="salt" label="salt" />
@@ -133,22 +153,28 @@ class Grid extends Component {
         <Checkbox value="honeysauce" label="honey sauce" />
         <Checkbox value="strawberryjam" label="strawberry jam" />
         <Checkbox value="grapejelly" label="grape jelly" />
-      </CheckboxGroup>
+      </div>
+      </div>
     )
   };
   
   getDessertOptions = () => {
       return (
-      <CheckboxGroup name='dessertOptions'>
+        <div>
+        <div>Desserts</div>
+      <div name='dessertOptions'>
         <Checkbox value="applepie" label="apple pie" />
         <Checkbox value="pecanpie" label="pecan pie" />
         <Checkbox value="mardigrascheesecake" label="mardi gras cheesecake" />
-      </CheckboxGroup>
+      </div>
+      </div>
     )
   };
   
   getBeverageOptions = () => {
     return (
+      <div>
+      <div>Beverages</div>
       <RadioButtonGroup name='beverageOptions'>
         <RadioButton value="coke" label="coke" />
         <RadioButton value="sprite" label="sprite" />
@@ -158,16 +184,20 @@ class Grid extends Component {
         <RadioButton value="lemonade" label="lemonade" />
         <RadioButton value="sweet tea" label="sweet tea" />
       </RadioButtonGroup>
+      </div>
     )
   };
   
   getGallonOptions = () => {
     return (
+      <div>
+      <div>Gallons</div>
       <RadioButtonGroup name='gallonOptions'>
         <RadioButton value="fruit punch" label="fruit punch" />
         <RadioButton value="lemonade" label="lemonade" />
         <RadioButton value="sweet tea" label="sweet tea" />
       </RadioButtonGroup>
+      </div>
     )
   };
 
@@ -328,7 +358,7 @@ class Grid extends Component {
     {
       id: 11,
       img: './Screenshots/shrimpsandwich.PNG',
-      title: 'Seafood Po\' Boy'
+      title: 'Seafood Po\' Boy',
       options: {
         flavor: false,
         seafood: true,
@@ -448,6 +478,7 @@ class Grid extends Component {
 
     createSubMenu = (options) => {
     return (
+      <div>
       { options.flavor ? this.getFlavorOptions() : null }
       { options.seafood ? this.getSeafoodOptions() : null }
       { options.beverages ? this.getBeverageOptions() : null }
@@ -458,6 +489,7 @@ class Grid extends Component {
       { options.threelargesides ? this.getThreeLargeSideOptions() : null }
       { options.dessert ? this.getDessertOptions() : null }
       { options.condiments ? this.getCondimentOptions() : null }
+      </div>
     )
   };
 
@@ -517,7 +549,7 @@ class Grid extends Component {
                   autoScrollBodyContent={true}
                 >
 
-                  { this.createSubmenu(tile.options)}
+                  { this.createSubMenu(tile.options)}
                 </Dialog>
               </IconButton>
             }
