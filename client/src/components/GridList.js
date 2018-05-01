@@ -16,8 +16,19 @@ class Grid extends Component {
   state = {
     open: false,
     tilesData: tilesData,
+    options: [],
     title: "",
-    price: ""
+    price: "",
+    flavorOptions: "",
+    seafoodOptions: "",
+    smallSideOptions: "",
+    largeSideOptions: "",
+    twoLargeSideOptions: [],
+    threeLargeOptions: [],
+    beverageOptions: "",
+    gallonOptions: "",
+    condimentOptions: [],
+    dessertOptions: []
   };
 
   styles = {
@@ -35,23 +46,64 @@ class Grid extends Component {
     },
   };
 
-  handleModalOpen = (title, price) => {
+  handleModalOpen = (title, price, options) => {
     this.setState({open: true});
     this.setState({title: title});
     this.setState({price: price});
-    console.log(this.state.open);
+    this.setState({options: options});
+    // console.log(this.state.open);
+  };
+
+  handleInputChange = event => {
+    const { name, value } = event.target;
+    // console.log(event);
+    this.setState({
+      [name]: value
+    });
+  };
+
+  handleCondimentChange = event => {
+    const value = event.target.value;
+    this.state.condimentOptions.push(value);
+  };
+
+  handleTwoSidesChange = event => {
+    const value = event.target.value;
+    this.state.twoLargeSideOptions.push(value);
+  };
+
+  handleThreeSidesChange = event => {
+    const value = event.target.value;
+    this.state.threeLargeSideOptions.push(value);
+  };
+
+  handleDessertChange = event => {
+    const value = event.target.value;
+    this.state.dessertOptions.push(value);
   };
 
   handleModalClose = () => {
     this.setState({open: false});
-    console.log(this.state.open);
+    // console.log(this.state.open);
+  };
+
+  handleFormSubmit = event => {
+    console.log(this.state.flavorOptions);
+    console.log(this.state.smallSideOptions);
+    console.log(this.state.largeSideOptions);
+    console.log(this.state.twoLargeSideOptions);
+    console.log(this.state.threeLargeSideOptions);
+    console.log(this.state.beverageOptions);
+    console.log(this.state.gallonOptions);
+    console.log(this.state.dessertOptions);
+    console.log(this.state.condimentOptions);
   };
 
   getFlavorOptions = () => {
     return (
       <div className="menuOptions">
       <div>Choose Flavor</div>
-      <RadioButtonGroup name='flavorOptions'>
+      <RadioButtonGroup onChange={this.handleInputChange} name='flavorOptions'>
         <RadioButton value="mild" label="mild" />
         <RadioButton value="spicy" label="spicy" />
         <RadioButton value="mixed" label="mixed" />
@@ -65,7 +117,7 @@ class Grid extends Component {
     return (
       <div className="menuOptions">
       <div>Seafood Options</div>
-      <RadioButtonGroup name='seafoodOptions'>
+      <RadioButtonGroup onChange={this.handleInputChange} name='seafoodOptions'>
         <RadioButton value="fish" label="fish" />
         <RadioButton value="shrimp" label="shrimp" />
       </RadioButtonGroup>
@@ -77,7 +129,7 @@ class Grid extends Component {
       return (
         <div className="menuOptions">
         <div>Choose Signature Side</div>
-      <RadioButtonGroup name='smallSideOptions'>
+      <RadioButtonGroup onChange={this.handleInputChange} name='smallSideOptions'>
         <RadioButton value="redbeansandrice" label="red beans and rice" />
         <RadioButton value="mashedpotatoesandgravy" label="mashed potatoes and gravy" />
         <RadioButton value="macaroniandcheese" label="macaroni and cheese" />
@@ -95,7 +147,7 @@ class Grid extends Component {
       return (
         <div className="menuOptions">
         <div>Choose Signature Side</div>
-      <RadioButtonGroup name='largeSideOptions'>
+      <RadioButtonGroup onChange={this.handleInputChange} name='largeSideOptions'>
         <RadioButton value="redbeansandrice" label="red beans and rice" />
         <RadioButton value="mashedpotatoesandgravy" label="mashed potatoes and gravy" />
         <RadioButton value="macaroniandcheese" label="macaroni and cheese" />
@@ -113,7 +165,7 @@ class Grid extends Component {
       return (
         <div className="menuOptions">
         <div>Choose 2 Signature Sides</div>
-      <div name='twoLargeSideOptions'>
+      <div onChange={this.handleTwoSidesChange} name='twoLargeSideOptions'>
         <Checkbox value="redbeansandrice" label="red beans and rice" />
         <Checkbox value="mashedpotatoesandgravy" label="mashed potatoes and gravy" />
         <Checkbox value="macaroniandcheese" label="macaroni and cheese" />
@@ -130,8 +182,8 @@ class Grid extends Component {
   getThreeLargeSideOptions = () => {
       return (
         <div className="menuOptions">
-        <div>Choose 3 Signature Side</div>
-      <div name='threeLargeSideOptions'>
+        <div>Choose 3 Signature Sides</div>
+      <div onChange={this.handleThreeSidesChange} name='threeLargeSideOptions'>
         <Checkbox value="redbeansandrice" label="red beans and rice" />
         <Checkbox value="mashedpotatoesandgravy" label="mashed potatoes and gravy" />
         <Checkbox value="macaroniandcheese" label="macaroni and cheese" />
@@ -149,7 +201,7 @@ class Grid extends Component {
       return (
         <div className="menuOptions">
         <div>Condiments</div>
-      <div name='condimentOptions'>
+      <div onChange={this.handleCondimentChange} name='condimentOptions'>
         <Checkbox value="ketchup" label="ketchup" />
         <Checkbox value="hotsauce" label="hot sauce" />
         <Checkbox value="salt" label="salt" />
@@ -166,7 +218,7 @@ class Grid extends Component {
       return (
         <div className="menuOptions">
         <div>Desserts</div>
-      <div name='dessertOptions'>
+      <div onChange={this.handleDessertChange} name='dessertOptions'>
         <Checkbox value="applepie" label="apple pie" />
         <Checkbox value="pecanpie" label="pecan pie" />
         <Checkbox value="mardigrascheesecake" label="mardi gras cheesecake" />
@@ -179,7 +231,7 @@ class Grid extends Component {
     return (
       <div className="menuOptions">
       <div>Beverages</div>
-      <RadioButtonGroup name='beverageOptions'>
+      <RadioButtonGroup onChange={this.handleInputChange} name='beverageOptions'>
         <RadioButton value="coke" label="coke" />
         <RadioButton value="sprite" label="sprite" />
         <RadioButton value="diet coke" label="diet coke" />
@@ -196,7 +248,7 @@ class Grid extends Component {
     return (
       <div className="menuOptions">
       <div>Gallons</div>
-      <RadioButtonGroup name='gallonOptions'>
+      <RadioButtonGroup onChange={this.handleInputChange} name='gallonOptions'>
         <RadioButton value="fruit punch" label="fruit punch" />
         <RadioButton value="lemonade" label="lemonade" />
         <RadioButton value="sweet tea" label="sweet tea" />
@@ -207,7 +259,7 @@ class Grid extends Component {
 
     createSubMenu = (options) => {
     return (
-      <div>
+      <form>
       { options.flavor ? this.getFlavorOptions() : null }
       { options.seafood ? this.getSeafoodOptions() : null }
       { options.beverages ? this.getBeverageOptions() : null }
@@ -218,7 +270,7 @@ class Grid extends Component {
       { options.threelargesides ? this.getThreeLargeSideOptions() : null }
       { options.dessert ? this.getDessertOptions() : null }
       { options.condiments ? this.getCondimentOptions() : null }
-      </div>
+      </form>
     )
   };
 
@@ -232,7 +284,7 @@ class Grid extends Component {
         label="Submit"
         primary={true}
         // disabled={true}
-        onClick={this.handleModalClose}
+        onClick={this.handleFormSubmit}
       />,
     ];
 
@@ -269,7 +321,7 @@ class Grid extends Component {
               // cols={2}
               actionIcon={<IconButton>}>
                 <MoreVertIcon onClick={()=>{
-                  this.handleModalOpen(tile.title, tile.price);
+                  this.handleModalOpen(tile.title, tile.price, tile.options);
                   console.log(tile.title);
                 }}color="red" />
                 <Dialog 
@@ -280,7 +332,7 @@ class Grid extends Component {
                   // autoScrollBodyContent={true}
                 >
 
-                  { this.createSubMenu(tile.options)}
+                  { this.createSubMenu(this.state.options)}
                 </Dialog>
               </IconButton>
             }
