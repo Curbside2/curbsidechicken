@@ -20,3 +20,5 @@ export {
 	db,
 	auth,
 };
+
+// sensitive information for firebase authentication api
