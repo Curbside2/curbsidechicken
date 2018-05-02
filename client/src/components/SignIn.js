@@ -9,7 +9,8 @@ import "./signin.css";
 
 const SignInPage = ({ history }) =>
   <div>
-    <h2 style={{ padding: "10px 20px", textAlign: "center", color: "black"}}>Sign In to Curbside Chicken!</h2>
+    <h2 className="signin-heading">Sign In to Curbside Chicken!</h2>
+    <p className="signin-form"></p>
     <SignInForm history={history} />
     <SignUpLink />
   </div>
@@ -65,7 +66,7 @@ class SignInForm extends Component {
       email === '';
 
     return (
-      <form onSubmit={this.onSubmit}>
+      <form className="signin-form" onSubmit={this.onSubmit}>
         <input
           value={email}
           onChange={event => this.setState(byPropKey('email', event.target.value))}
@@ -84,6 +85,8 @@ class SignInForm extends Component {
         </button>
 
         { error && <p>{error.message}</p> }
+
+
       </form>
     );
   }

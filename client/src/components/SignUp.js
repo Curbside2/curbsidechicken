@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { db, auth } from '../firebase'
 import * as routes from '../constants/routes';
+import "./signin.css"; 
 
 const SignUpPage = () =>
   <div>
-    <h1 style={{ textAlign: 'center' }}> Sign Up for Curbside Chicken </h1>
-    
+    <h2 className="signup-heading">Sign Up for Curbside Chicken!</h2>
+    <p className="signup-form"> </p>
     <SignUpForm />
   </div>
 
@@ -66,6 +67,7 @@ class SignUpForm extends Component {
 
   render() {
     return (
+    <p className="signup-form">
       <form onSubmit={this.onSubmit}>
         <input
           value={this.email}
@@ -92,6 +94,7 @@ class SignUpForm extends Component {
         { this.error && <p>{this.error.message}</p> }
 
       </form>
+      </p>
     );
   }
 }

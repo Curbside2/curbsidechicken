@@ -1,9 +1,54 @@
-form {
+.signin-heading {
 
 	justify-content: center;
 	display: flex;
 	margin: 0 auto;
+	text-align: center;
 
+}
+
+.signin-form {
+
+	justify-content: center;
+	display: flex;
+	margin: 0 auto;
+	text-align: center;
+	padding-top: 10px;
+
+}
+
+
+.signup-heading {
+
+	justify-content: center;
+	display: flex;
+	margin: 0 auto;
+	text-align: center;
+	padding-top: 10px;
+
+}
+
+.signup-form {
+	justify-content: center;
+	display: flex;
+	margin: 0 auto;
+	text-align: center;
+	padding-top: 10px;
+
+}
+
+.form-heading {
+	justify-content: center;
+	display: flex;
+	margin: 0 auto;
+	text-align: center;
+	padding-top: 20px;
+}
+
+
+body {
+
+	
 }
 
  {
