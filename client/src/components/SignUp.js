@@ -5,7 +5,7 @@ import * as routes from '../constants/routes';
 
 const SignUpPage = () =>
   <div>
-    <h1>Sign Up for Curbside Chicken</h1>
+    <h1 style={{ textAlign: 'center' }}> Sign Up for Curbside Chicken </h1>
     
     <SignUpForm />
   </div>
