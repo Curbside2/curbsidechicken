@@ -4,11 +4,10 @@ import { withRouter } from 'react-router-dom';
 import { SignUpLink } from './SignUp';
 import { auth } from '../firebase';
 import * as routes from '../constants/routes';
-import CurbsideChickenlogo from './CurbsideChickenlogo.png';
 import "./signin.css"; 
 
 const SignInPage = ({ history }) =>
-  <div>
+  <div className="signin-div">
     <h2 className="signin-heading">Sign In to Curbside Chicken!</h2>
     <p className="signin-form"></p>
     <SignInForm history={history} />

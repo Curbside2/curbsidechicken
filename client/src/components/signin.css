@@ -45,13 +45,9 @@
 	padding-top: 20px;
 }
 
-
-body {
-
-	
-}
-
- {
-
+.signin-div {
+	line-height: 200px;
 	background: url('./CurbsideChickenlogo.png');
+	background-repeat: no-repeat; 
+	background-position: center center;
 }
