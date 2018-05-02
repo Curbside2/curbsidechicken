@@ -5,7 +5,7 @@ import * as routes from '../constants/routes';
 import "./signin.css"; 
 
 const SignUpPage = () =>
-  <div>
+  <div className="signin-div">
     <h2 className="signup-heading">Sign Up for Curbside Chicken!</h2>
     <p className="signup-form"> </p>
     <SignUpForm />
