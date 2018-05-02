@@ -4,10 +4,12 @@ import { withRouter } from 'react-router-dom';
 import { SignUpLink } from './SignUp';
 import { auth } from '../firebase';
 import * as routes from '../constants/routes';
+import CurbsideChickenlogo from './CurbsideChickenlogo.png';
+import "./signin.css"; 
 
 const SignInPage = ({ history }) =>
   <div>
-    <h1>SignIn</h1>
+    <h2 style={{ padding: "10px 20px", textAlign: "center", color: "black"}}>Sign In to Curbside Chicken!</h2>
     <SignInForm history={history} />
     <SignUpLink />
   </div>
@@ -69,6 +71,7 @@ class SignInForm extends Component {
           onChange={event => this.setState(byPropKey('email', event.target.value))}
           type="text"
           placeholder="Email Address"
+
         />
         <input
           value={password}
@@ -85,6 +88,9 @@ class SignInForm extends Component {
     );
   }
 }
+
+
+
 
 export default withRouter(SignInPage);
 
