@@ -4,6 +4,7 @@ import { withRouter } from 'react-router-dom';
 import { SignUpLink } from './SignUp';
 import { auth } from '../firebase';
 import * as routes from '../constants/routes';
+import CurbsideChickenlogo from './CurbsideChickenlogo.png';
 
 const SignInPage = ({ history }) =>
   <div>
@@ -86,8 +87,19 @@ class SignInForm extends Component {
   }
 }
 
+const Header = props => (
+  <header>
+    <img className="chickenpic" src={CurbsideChickenlogo} />
+    <div className="Header">
+      <h1 className="Header-note">Click on every image just once!</h1>
+    </div>
+  </header>
+);
+
+
 export default withRouter(SignInPage);
 
 export {
   SignInForm,
+  Header,
 };
