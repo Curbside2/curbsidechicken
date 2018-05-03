@@ -32,14 +32,14 @@ class SignUpForm extends Component {
     const {
       email,
       passwordOne,
-      // passwordTwo,
-      // error,
+      passwordTwo,
+      error,
     } = this.state;
 
-    // const isInvalid =
-    //   passwordOne !== passwordTwo ||
-    //   passwordOne === '' ||
-    //   email === '';
+     const isInvalid =
+       passwordOne !== passwordTwo ||
+       passwordOne === '' ||
+       email === '';
 
     const {
       history,
@@ -51,8 +51,10 @@ class SignUpForm extends Component {
         // Create a user in your own accessible Firebase Database too
         db.doCreateUser(authUser.uid, email)
           .then(() => {
-            this.setState(() => ({ ...INITIAL_STATE }));
-            history.push(routes.HOME);
+            this.setState(() => (
+              { ...INITIAL_STATE }
+              ));
+              history.push(routes.SIGN_IN);
           })
           .catch(error => {
             this.setState(byPropKey('error', error));

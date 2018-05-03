@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Avi from '../../components/Avi';
 import BottomNav from '../../components/BottomNav';
-import Form from '../../components/Form'
-import Input from '../../components/Input'
+import Form from '../../components/Form';
+import Input from '../../components/Input';
+import DropForm from '../../components/DropForm';
 
 const styles = {
 	carForm: {
@@ -29,6 +30,7 @@ class Profile extends Component {
 				<div style={styles.nameForm}>
 					<Avi/>
 					<Form />
+					<DropForm />
 				</div>
 				<div style={styles.carForm}>
 					<Avi />
