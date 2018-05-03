@@ -22,17 +22,14 @@ class Profile extends Component {
 				<div className="name-form">
 					<Avi/>
 					<Form />
-					<DropForm />
 				</div>
-				<Avi2 />
 				<div className="car-form">
+					<Avi2 />
 					<Input />
 				</div>
 				<div className="bottom-nav">
 					<BottomNav />
 				</div>
-				
-
 			</div>
 			</MuiThemeProvider>
 		)
