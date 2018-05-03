@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Avi from '../../components/Avi';
 import Avi2 from '../../components/Avi2';
-import Avi3 from '../../components/Avi3';
 import BottomNav from '../../components/BottomNav';
 import Form from '../../components/Form'
 import Input from '../../components/Input'
