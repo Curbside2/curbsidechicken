@@ -32,15 +32,15 @@ class SignUpForm extends Component {
     const {
       email,
       passwordOne,
-      // passwordTwo,
-      // error    
+      passwordTwo,
+      error    
     } = this.state;
 
 
-     // const isInvalid =
-     //   passwordOne !== passwordTwo ||
-     //   passwordOne === '' ||
-     //   email === '';
+     const isInvalid =
+       passwordOne !== passwordTwo ||
+       passwordOne === '' ||
+       email === '';
 
     const {
       history,
@@ -109,9 +109,13 @@ const SignUpLink = () =>
     <Link to={routes.SIGN_UP}>Sign Up</Link>
   </p>
 
+const userNameBlock = () => 
+  <p>Hello! {this.state.email}</p>
+
 export default SignUpPage;
 
 export {
   SignUpForm,
   SignUpLink,
+  userNameBlock,
 };

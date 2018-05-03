@@ -7,6 +7,7 @@ import Form from '../../components/Form'
 import Input from '../../components/Input'
 import "../../components/signin.css"; 
 import DropForm from '../../components/DropForm';
+import { userNameBlock } from '../../components/SignUp';
 
 
 class Profile extends Component {
@@ -15,6 +16,9 @@ class Profile extends Component {
 		return (
 			<MuiThemeProvider >
 			<div className="profile-div">
+				<div>
+					<userNameBlock />
+				</div>
 				<div className="name-form">
 					<Avi/>
 					<Form />

@@ -4,9 +4,11 @@ import {BottomNavigation, BottomNavigationItem} from 'material-ui/BottomNavigati
 import Paper from 'material-ui/Paper';
 // import IconLocationOn from 'material-ui/svg-icons/communication/location-on';
 import { Link } from 'react-router-dom'
+import SignOut from './SignOut'
 
 const recentsIcon = <FontIcon className="material-icons">Place</FontIcon>;
 const settingsIcon = <FontIcon className="material-icons">Settings</FontIcon>;
+const signOutIcon = <FontIcon className="material-icons">Settings</FontIcon>;
 
 /**
  * A simple example of `BottomNavigation`, with three labels and icons
@@ -28,11 +30,14 @@ class BottomNav extends Component {
                  icon={recentsIcon}
               />
             </Link>
-            <Link to='/menu'>
+            <Link to='/profile'>
               <BottomNavigationItem
                  label="Update Settings"
                  icon={settingsIcon}
               />
+            </Link>
+            <Link to='/signin'>
+            <SignOut />
             </Link>
           </BottomNavigation>
         </Paper>
