@@ -8,22 +8,15 @@
 	padding-bottom: 40px;
 	font-style: italic;
 	font-size: 40px;
-
-
-
-
 }
 
 .signin-form {
-
-	justify-content: center;
-	display: flex;
-	margin: 0 auto;
-	text-align: center;
-	padding-top: 10px;
-
+	text-align: right;
+    padding-bottom: 20px;
+    margin-bottom: 200px;
+    padding-right: 100px;
+    font-weight: bold
 }
-
 
 .signup-heading {
 

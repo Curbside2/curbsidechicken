@@ -70,8 +70,8 @@ class SignUpForm extends Component {
 
   render() {
     return (
-    <p className="signup-form">
-      <form onSubmit={this.onSubmit}>
+    // <p className="signup-form">
+      <form className="signup-form" onSubmit={this.onSubmit}>
         <input
           value={this.email}
           onChange={event => this.setState(byPropKey('email', event.target.value))}
@@ -97,7 +97,7 @@ class SignUpForm extends Component {
         { this.error && <p>{this.error.message}</p> }
 
       </form>
-      </p>
+      // </p>
     );
   }
 }
