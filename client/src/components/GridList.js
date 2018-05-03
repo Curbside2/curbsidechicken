@@ -8,6 +8,7 @@ import {RadioButton, RadioButtonGroup} from 'material-ui/RadioButton';
 import Checkbox from 'material-ui/Checkbox';
 import tilesData from './tilesData.json';
 import "./GridList.css"
+import API from '../utils/API';
 
 class Grid extends Component {
 
@@ -26,8 +27,7 @@ class Grid extends Component {
     beverageOptions: "",
     gallonOptions: "",
     condimentOptions: [],
-    dessertOptions: [],
-    finalOrder:[],
+    dessertOptions: []
   };
 
   styles = {
@@ -86,8 +86,20 @@ class Grid extends Component {
   };
 
   handleModalClose = () => {
-    this.setState({open: false});
-    // console.log(this.state.open);
+    this.setState({
+    	open: false,
+    	title: "",
+    	flavorOptions: "",
+    	seafoodOptions: "",
+    	smallSideOptions: "",
+    	largeSideOptions: "",
+    	twoLargeSideOptions: "",
+    	threeLargeSideOptions: "",
+    	beverageOptions: "",
+    	gallonOptions: "",
+    	condimentOptions: [],
+    	dessertOptions: []
+    })
   };
 
   handleFormSubmit = event => {
@@ -100,17 +112,22 @@ class Grid extends Component {
     console.log(this.state.gallonOptions);
     console.log(this.state.dessertOptions);
     console.log(this.state.condimentOptions);
-    this.state.finalOrder.push(this.state.flavorOptions);
-    this.state.finalOrder.push(this.state.smallSideOptions);
-    this.state.finalOrder.push(this.state.largeSideOptions);
-    this.state.finalOrder.push(this.state.twoLargeSideOptions);
-    this.state.finalOrder.push(this.state.threeLargeSideOptions);
-    this.state.finalOrder.push(this.state.beverageOptions);
-    this.state.finalOrder.push(this.state.gallonOptions);
-    this.state.finalOrder.push(this.state.dessertOptions);
-    this.state.finalOrder.push(this.state.condimentOptions);
-    console.log(this.state.finalOrder)
     
+    const order = {
+    mainCourse: this.state.title,
+    chickenFlavor: this.state.flavorOptions,
+    smallSide: this.smallSideOptions,
+    largeSide: this.state.largeSideOptions,
+    twoLargeSide: this.state.twoLargeSideOptions,
+    threeLargeSide: this.state.threeLargeSideOptions,
+    beverage: this.state.beverageOptions,
+    gallon: this.state.gallonOptions,
+    dessert: this.state.dessertOptions,
+    condiment: this.state.condimentOptions
+    };
+
+    API.createOrder(order);
+    this.handleModalClose();
   };
 
   getFlavorOptions = () => {
