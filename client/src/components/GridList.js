@@ -9,7 +9,8 @@ import FlatButton from 'material-ui/FlatButton';
 import {RadioButton, RadioButtonGroup} from 'material-ui/RadioButton';
 import Checkbox from 'material-ui/Checkbox';
 import tilesData from './tilesData.json';
-import "./GridList.css"
+import "./GridList.css";
+import API from '../utils/API.js';
 
 class Grid extends Component {
 
@@ -28,7 +29,7 @@ class Grid extends Component {
     beverageOptions: "",
     gallonOptions: "",
     condimentOptions: [],
-    dessertOptions: []
+    dessertOptions: [],
   };
 
   styles = {
@@ -87,20 +88,49 @@ class Grid extends Component {
   };
 
   handleModalClose = () => {
-    this.setState({open: false});
-    // console.log(this.state.open);
+    this.setState({
+          open: false,
+          title: "",
+          flavorOptions: "",
+          seafoodOptions: "",
+          smallSideOptions: "",
+          largeSideOptions: "",
+          twoLargeSideOptions: [],
+          threeLargeSideOptions: [],
+          beverageOptions: "",
+          gallonOptions: "",
+          condimentOptions: [],
+          dessertOptions: []
+      })
   };
 
   handleFormSubmit = event => {
-    console.log(this.state.flavorOptions);
-    console.log(this.state.smallSideOptions);
-    console.log(this.state.largeSideOptions);
-    console.log(this.state.twoLargeSideOptions);
-    console.log(this.state.threeLargeSideOptions);
-    console.log(this.state.beverageOptions);
-    console.log(this.state.gallonOptions);
-    console.log(this.state.dessertOptions);
-    console.log(this.state.condimentOptions);
+    console.log('main Course:', this.state.title);
+    console.log('flavors:', this.state.flavorOptions);
+    console.log('small:', this.state.smallSideOptions);
+    console.log('large:', this.state.largeSideOptions);
+    console.log('2large:', this.state.twoLargeSideOptions);
+    console.log('3large:', this.state.threeLargeSideOptions);
+    console.log('beverage:', this.state.beverageOptions);
+    console.log('gallon:', this.state.gallonOptions);
+    console.log('dessert:', this.state.dessertOptions);
+    console.log('condiment:', this.state.condimentOptions);
+    
+    const order = {
+      mainCourse: this.state.title,
+      chickenFlavor: this.state.flavorOptions,
+      smallSide: this.state.smallSideOptions,
+      largeSide: this.state.largeSideOptions,
+      twoLargeSides: this.state.twoLargeSideOptions,
+      threeLargeSides: this.state.threeLargeSideOptions,
+      beverage: this.state.beverageOptions,
+      gallon: this.state.gallonOptions,
+      dessert: this.state.dessertOptions,
+      condiment: this.state.condimentOptions
+    };
+
+    API.createOrder(order);
+    this.handleModalClose();
   };
 
   getFlavorOptions = () => {
@@ -333,7 +363,7 @@ class Grid extends Component {
                   modal= {true}
                   open={this.state.open}
                   actions={this.actions}
-                  autoScrollBodyContent={true}
+                  // autoScrollBodyContent={true}
                   autoDetectWindowHeight={true}
                 >
 

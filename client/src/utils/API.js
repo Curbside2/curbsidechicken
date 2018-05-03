@@ -12,5 +12,8 @@ export default {
   // Saves a book to the database
   saveOrder: function(userData) {
     return axios.post("/api/users", userData);
+  },
+  createOrder: function(order) {
+    return axios.post('/api/orders', order)
   }
 };

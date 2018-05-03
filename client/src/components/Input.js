@@ -9,7 +9,7 @@ const cars = [
   'Ford Fusion',
   'Hyundai Elantra',
   'Nissan Sentra',
-  'Nisan Maxima',
+  'Nissan Maxima',
   'Nissan Altima',
 ];
 
