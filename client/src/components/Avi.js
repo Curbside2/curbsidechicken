@@ -5,6 +5,7 @@ import Avatar from 'material-ui/Avatar';
 import List from 'material-ui/List/List';
 import ListItem from 'material-ui/List/ListItem';
 // import Form from './Form'
+import aviImage from './images/bondJamesbond.jpg';
 
 // import {
 //   blue300,
@@ -30,7 +31,7 @@ const Avi = () => (
       disabled={true}
       rightAvatar={
         <Avatar
-          src="./screenshots/bondJamesbond.jpg"
+          src={aviImage}
           size={200}
           style={style}
         />
