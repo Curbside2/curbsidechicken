@@ -222,8 +222,8 @@
       "options": {
         "flavor": true,
         "seafood": false,
-        "beverages": true,
-        "gallons": false,
+        "beverages": false,
+        "gallons": true,
         "smallsides": false,
         "largesides": false,
         "twolargesides": false,
@@ -240,8 +240,8 @@
       "options": {
         "flavor": true,
         "seafood": false,
-        "beverages": true,
-        "gallons": false,
+        "beverages": false,
+        "gallons": true,
         "smallsides": false,
         "largesides": false,
         "twolargesides": false,
@@ -258,8 +258,8 @@
       "options": {
         "flavor": true,
         "seafood": false,
-        "beverages": true,
-        "gallons": false,
+        "beverages": false,
+        "gallons": true,
         "smallsides": false,
         "largesides": false,
         "twolargesides": false,
@@ -276,8 +276,8 @@
       "options": {
         "flavor": true,
         "seafood": false,
-        "beverages": true,
-        "gallons": false,
+        "beverages": false,
+        "gallons": true,
         "smallsides": false,
         "largesides": false,
         "twolargesides": false,

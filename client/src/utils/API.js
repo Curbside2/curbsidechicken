@@ -14,8 +14,8 @@ export default {
     return axios.post("/api/users", userData);
   },
   //creates an order to 
-  createOrder: function(order) {
-    console.log('Creating order:', order);
-    return axios.post('/api/orders', order)
+  createOrder: function(orderData) {
+    console.log('Creating order:', orderData);
+    return axios.post('/api/orders/create', orderData)
   }
 };

@@ -22,10 +22,10 @@ class Grid extends Component {
     seafoodOptions: "",
     smallSideOptions: "",
     largeSideOptions: "",
-    twoLargeSideOptions: "",
-    threeLargeSideOptions: "",
+    twoLargeSideOptions: [],
+    threeLargeSideOptions: [],
     beverageOptions: "",
-    gallonOptions: "",
+    gallonOptions: [],
     condimentOptions: [],
     dessertOptions: []
   };
@@ -93,8 +93,8 @@ class Grid extends Component {
     	seafoodOptions: "",
     	smallSideOptions: "",
     	largeSideOptions: "",
-    	twoLargeSideOptions: "",
-    	threeLargeSideOptions: "",
+    	twoLargeSideOptions: [],
+    	threeLargeSideOptions: [],
     	beverageOptions: "",
     	gallonOptions: "",
     	condimentOptions: [],
@@ -103,17 +103,17 @@ class Grid extends Component {
   };
 
   handleFormSubmit = event => {
-    console.log(this.state.flavorOptions);
-    console.log(this.state.smallSideOptions);
-    console.log(this.state.largeSideOptions);
-    console.log(this.state.twoLargeSideOptions);
-    console.log(this.state.threeLargeSideOptions);
-    console.log(this.state.beverageOptions);
-    console.log(this.state.gallonOptions);
-    console.log(this.state.dessertOptions);
-    console.log(this.state.condimentOptions);
+    // console.log(this.state.flavorOptions);
+    // console.log(this.state.smallSideOptions);
+    // console.log(this.state.largeSideOptions);
+    // console.log(this.state.twoLargeSideOptions);
+    // console.log(this.state.threeLargeSideOptions);
+    // console.log(this.state.beverageOptions);
+    // console.log(this.state.gallonOptions);
+    // console.log(this.state.dessertOptions);
+    // console.log(this.state.condimentOptions);
     
-    const order = {
+    API.createOrder({
     mainCourse: this.state.title,
     chickenFlavor: this.state.flavorOptions,
     smallSide: this.smallSideOptions,
@@ -124,9 +124,10 @@ class Grid extends Component {
     gallon: this.state.gallonOptions,
     dessert: this.state.dessertOptions,
     condiment: this.state.condimentOptions
-    };
+    })
+      .then(res => console.log(res))
+      .catch(err => console.log(err));
 
-    API.createOrder(order);
     this.handleModalClose();
   };
 

@@ -2,6 +2,12 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:3001/",
+  "homepage": "https://curbsidechicken.herokuapp.com/",
+  "root": "build/",
+ "routes": {
+   "/**": "index.html"
+ },
   "dependencies": {
     "axios": "^0.18.0",
     "firebase": "^4.13.1",
