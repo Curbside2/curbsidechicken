@@ -3,9 +3,13 @@
 	
 	justify-content: center;
 	display: flex;
-	margin: 0 auto;
+	margin-top: 40px, !important;
 	text-align: center;
-	padding-top: 20px;
+	padding-bottom: 40px;
+	font-style: italic;
+	font-size: 40px;
+
+
 
 
 }
@@ -27,16 +31,24 @@
 	display: flex;
 	margin: 0 auto;
 	text-align: center;
-	padding-top: 20px;
+	padding-bottom: 40px;
+	font-style: italic;
+	font-size: 40px;
+	margin-top: 20px;
+
 
 }
 
 .signup-form {
 	justify-content: center;
-	display: flex;
-	margin: 0 auto;
+	display: inline-block;
 	text-align: center;
-	padding-top: 10px;
+	padding-bottom: 20px;
+	margin-bottom: 80px;
+	padding-right: 110px;
+	font-weight: bold;
+
+
 
 }
 
@@ -63,6 +75,7 @@
     width: 50%;
     border: 1px;
 
+
 }
 
 
@@ -72,6 +85,43 @@
 	display: flex;
 	margin: 0 auto;
 	text-align: center;
-	padding-top: 40px;
+	padding-bottom: 20px;
 
 }
+
+.name-form {
+
+	margin-bottom: 50px;
+	margin-left: 50px;
+	margin-right: 50px;
+
+}
+
+.car-form {
+
+	margin-bottom: 50px;
+	margin-left: 50px;
+	margin-bottom: 150px;
+	background-color: white;
+
+}
+
+.bottom-nav {
+	text-align: center;
+}
+
+.profile-div {
+	background-color: blue;
+}
+
+.footer-pic {
+	margin-bottom: 5;
+  	justify-content: center;
+ 	width: 200;
+ 	margin: 0 auto;
+ 	display: flex;
+ 	position: absolute;
+ 	text-align: center;
+}
+
+

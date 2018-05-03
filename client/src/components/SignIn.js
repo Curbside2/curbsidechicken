@@ -11,7 +11,8 @@ const SignInPage = ({ history }) =>
     <h2 className="signin-heading">Sign In to Curbside Chicken!</h2>
     <p className="signin-form"></p>
     <SignInForm history={history} />
-    <SignUpLink />
+    <p className="sulink">
+    <SignUpLink /> </p>
   </div>
 
 const byPropKey = (propertyName, value) => () => ({
@@ -90,8 +91,6 @@ class SignInForm extends Component {
     );
   }
 }
-
-
 
 
 export default withRouter(SignInPage);

@@ -15,43 +15,26 @@ import ListItem from 'material-ui/List/ListItem';
 //   purple500,
 // } from 'material-ui/styles/colors';
 
-const style = {
-  margin: 5,
-  justifyContent: 'center'
-};
+
 
 /**
  * Examples of `Avatar` using an image, [Font Icon](/#/components/font-icon), [SVG Icon](/#/components/svg-icon)
  * and "Letter" (string), with and without custom colors at the default size (`40dp`) and an alternate size (`30dp`).
  */
-const Avi = () => (
+
+const Avi3 = () => (
   <List>
     <ListItem
       disabled={true}
       rightAvatar={
         <Avatar
-          src="./screenshots/bondJamesbond.jpg"
-          size={200}
-          style={style}
+          src="./screenshots/bottompic.png"
+          size={500}
+          className="footer-pic"
         />
       }
     />
   </List>
 );
 
-const Avi2 = () => (
-  <List>
-    <ListItem
-      disabled={true}
-      rightAvatar={
-        <Avatar
-          src="./screenshots/caravatar.png"
-          size={200}
-          style={style}
-        />
-      }
-    />
-  </List>
-);
-
-export default Avi;
+export default Avi3;

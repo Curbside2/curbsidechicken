@@ -100,7 +100,7 @@ class SignUpForm extends Component {
 }
 
 const SignUpLink = () =>
-  <p style={{ textAlign: 'center'}}>
+  <p style={{ textAlign: 'center', bottom: 60}}>
     Don't have an account?
     {' '}
     <Link to={routes.SIGN_UP}>Sign Up</Link>
