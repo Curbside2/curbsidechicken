@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import FontIcon from 'material-ui/FontIcon';
 import {BottomNavigation, BottomNavigationItem} from 'material-ui/BottomNavigation';
 import Paper from 'material-ui/Paper';
-import IconLocationOn from 'material-ui/svg-icons/communication/location-on';
+// import IconLocationOn from 'material-ui/svg-icons/communication/location-on';
 import { Link } from 'react-router-dom'
 
 const recentsIcon = <FontIcon className="material-icons">Place</FontIcon>;

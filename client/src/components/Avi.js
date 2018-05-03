@@ -39,19 +39,5 @@ const Avi = () => (
   </List>
 );
 
-const Avi2 = () => (
-  <List>
-    <ListItem
-      disabled={true}
-      rightAvatar={
-        <Avatar
-          src="./screenshots/caravatar.png"
-          size={200}
-          style={style}
-        />
-      }
-    />
-  </List>
-);
 
 export default Avi;

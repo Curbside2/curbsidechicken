@@ -32,14 +32,15 @@ class SignUpForm extends Component {
     const {
       email,
       passwordOne,
-      passwordTwo,
-      error,
+      // passwordTwo,
+      // error    
     } = this.state;
 
-     const isInvalid =
-       passwordOne !== passwordTwo ||
-       passwordOne === '' ||
-       email === '';
+
+     // const isInvalid =
+     //   passwordOne !== passwordTwo ||
+     //   passwordOne === '' ||
+     //   email === '';
 
     const {
       history,
