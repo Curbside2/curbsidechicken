@@ -5919,6 +5919,10 @@ react-transition-group@^1.2.1:
     prop-types "^15.5.6"
     warning "^3.0.0"
 
+react-upload-images@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/react-upload-images/-/react-upload-images-1.0.2.tgz#c1b1b9bb34a947e02c2ceaa94c58703ee35c39f7"
+
 react@^16.3.2:
   version "16.3.2"
   resolved "https://registry.yarnpkg.com/react/-/react-16.3.2.tgz#fdc8420398533a1e58872f59091b272ce2f91ea9"

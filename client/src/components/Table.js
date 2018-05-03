@@ -11,7 +11,7 @@ import {
 
 export default class TableExampleControlled extends Component {
   state = {
-    selected: [1],
+    selected: '',
   };
 
   isSelected = (index) => {
@@ -22,6 +22,7 @@ export default class TableExampleControlled extends Component {
     this.setState({
       selected: selectedRows,
     });
+    console.log(this.state.selected)
   };
 
   render() {

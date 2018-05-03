@@ -5,20 +5,36 @@ import BottomNav from '../../components/BottomNav';
 import Form from '../../components/Form'
 import Input from '../../components/Input'
 
+const styles = {
+	carForm: {
+		marginBottom: 150,
+		marginLeft:50,
+		marginRight: 50
+	},
+	nameForm: {
+		marginBottom: 50,
+		marginLeft: 50,
+		marginRight: 50
+	},
+	BottomNav: {
+		textAlign: 'center'
+	},
+}
+
 class Profile extends Component {
 
 	render() {
 		return (
 			<MuiThemeProvider>
-				<div>
-					<Avi />
+				<div style={styles.nameForm}>
+					<Avi/>
 					<Form />
 				</div>
-				<div>
+				<div style={styles.carForm}>
 					<Avi />
 					<Input />
 				</div>
-				<div>
+				<div style={styles.BottomNav}>
 					<BottomNav />
 				</div>
 			</MuiThemeProvider>
