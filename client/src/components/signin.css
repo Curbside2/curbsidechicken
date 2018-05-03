@@ -1,10 +1,12 @@
 .signin-heading {
 
+	
 	justify-content: center;
 	display: flex;
 	margin: 0 auto;
 	text-align: center;
-	padding-top: 10px;
+	padding-top: 20px;
+
 
 }
 
@@ -25,7 +27,7 @@
 	display: flex;
 	margin: 0 auto;
 	text-align: center;
-	padding-top: 10px;
+	padding-top: 20px;
 
 }
 
@@ -51,4 +53,25 @@
 	background: url('./CurbsideChickenlogo.png');
 	background-repeat: no-repeat; 
 	background-position: center center;
+	padding-top: 100px;
+	border-radius: 50%;
+	box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    width: 50%;
+    border: 1px;
+
+}
+
+
+.signup-link {
+
+	justify-content: center;
+	display: flex;
+	margin: 0 auto;
+	text-align: center;
+	padding-top: 40px;
+
 }
