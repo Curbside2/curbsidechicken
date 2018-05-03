@@ -11,6 +11,7 @@ import Table from './Table';
 import GridList from './GridList';
 import Form from './Form';
 import Input from './Input';
+import CardForm from './CardForm'
 
 /**
  * Vertical steppers are designed for narrow screen sizes. They are ideal for mobile.
@@ -90,32 +91,14 @@ class VerticalLinearStepper extends React.Component {
             </StepContent>
           </Step>
           <Step>
-            <StepLabel>Car and Payment</StepLabel>
+            <StepLabel>Payment</StepLabel>
             <StepContent>
-              <p>
-              What kind of car do you have?
-              </p>
-              <Input />
-              <p>
-              Please enter your name as if appears on your license.
-              </p>
-              <Form />
+              <CardForm />
               {this.renderStepActions(2)}
             </StepContent>
           </Step>
         </Stepper>
-        {finished && (
-          <p style={{margin: '20px 0', textAlign: 'center'}}>
-            <a
-              onClick={(event) => {
-                event.preventDefault();
-                this.setState({stepIndex: 0, finished: false});
-              }}
-            >
-              Click here
-            </a> to reset the example.
-          </p>
-        )}
+        {finished}
       </div>
     );
   }
